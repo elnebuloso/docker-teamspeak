@@ -6,7 +6,7 @@
 ### building teamspeak docker container through pull
 
 ```
-docker pull elnebuloso/docker-teamspeak:1.0.1
+docker pull elnebuloso/docker-teamspeak:1.0.2
 ```
 
 ### building teamspeak docker container through repository
