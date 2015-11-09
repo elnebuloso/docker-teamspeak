@@ -2,7 +2,7 @@
 
 * https://hub.docker.com/r/elnebuloso/docker-teamspeak/
 
-### building teamspeak docker container through pull (preferred way)
+### building teamspeak docker container through pull
 
 ```
 docker pull elnebuloso/docker-teamspeak
