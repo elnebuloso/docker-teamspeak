@@ -37,7 +37,7 @@ docker run -d=true -p=9987:9987/udp -p=10011:10011 -p=30033:30033 -v=/path/to/yo
 
 the server admin token can be found inside the container in /data/logs, or when mounted in /path/to/your/teamspeak/data/directory
 
-### useful commanda
+### useful commands
 
 ```
 docker start <container_id|container_name>
