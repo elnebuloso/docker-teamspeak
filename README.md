@@ -1,11 +1,12 @@
 # docker-teamspeak
 
 * https://hub.docker.com/r/elnebuloso/docker-teamspeak/
+* https://hub.docker.com/r/elnebuloso/docker-teamspeak/tags/
 
 ### building teamspeak docker container through pull
 
 ```
-docker pull elnebuloso/docker-teamspeak
+docker pull elnebuloso/docker-teamspeak:1.0.1
 ```
 
 ### building teamspeak docker container through repository
