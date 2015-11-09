@@ -6,6 +6,10 @@
 ### building teamspeak docker container through pull
 
 ```
+# latest
+docker pull elnebuloso/docker-teamspeak
+
+# defined version
 docker pull elnebuloso/docker-teamspeak:1.0.2
 ```
 
