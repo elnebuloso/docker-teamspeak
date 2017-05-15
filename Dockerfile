@@ -1,33 +1,46 @@
-# http://docs.docker.com/engine/articles/dockerfile_best-practices/
-# In addition, cleaning up the apt cache and removing /var/lib/apt/lists helps keep the image size down.
-# Since the RUN statement starts with apt-get update, the package cache will always be refreshed prior to apt-get install.
-
 # system
-FROM ubuntu:14.04
+FROM ubuntu:16.04
+MAINTAINER jeff.tunessen@gmail.com
 
-# run as noninteractive ignoring notifications we cannot answer during installation
+# terminal
+ENV TERM linux
 ENV DEBIAN_FRONTEND noninteractive
+ENV TEAMSPEAK_VERSION 3.0.13.6
 
-# install essentials
-RUN apt-get update && apt-get install -y \
-  curl \
-&& apt-get clean \
-&& rm -rf /var/lib/apt/lists/*
+# download teamspeak3
+ADD http://dl.4players.de/ts/releases/${TEAMSPEAK_VERSION}/teamspeak3-server_linux_amd64-${TEAMSPEAK_VERSION}.tar.bz2 /tmp/teamspeak.tar.bz2
 
-# download and install teamspeak
-RUN curl "http://dl.4players.de/ts/releases/3.0.11.4/teamspeak3-server_linux-amd64-3.0.11.4.tar.gz" -o teamspeak3-server_linux-amd64-3.0.11.4.tar.gz
-RUN tar zxf teamspeak3-server_linux-amd64-3.0.11.4.tar.gz; mv teamspeak3-server_linux-amd64 /opt/teamspeak; rm teamspeak3-server_linux-amd64-3.0.11.4.tar.gz
+# install teamspeak3
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends less bzip2 \
+    && tar -C /opt -xjf /tmp/teamspeak.tar.bz2 \
+    && rm /tmp/teamspeak.tar.bz2 \
+    && echo 'alias l="ls -alhF"' > /root/.bash_aliases \
+    && apt-get -y autoremove \
+    && apt-get -y clean \
+    && rm -rf /var/cache/apt/archives/* \
+    && rm -rf /var/lib/apt/lists/* \
+    && rm -rf /var/tmp/* \
+    && rm -rf /usr/share/doc/* \
+    && rm -rf /usr/share/man/* \
+    && rm -rf /usr/share/locale/* \
+    && rm -rf /tmp/*
 
-# load scripts
-ADD ./scripts/start.sh /start
+# make startup script
+ADD /scripts/ /opt/scripts/
+RUN chmod -R 774 /opt/scripts/
 
-# fix permissions in scripts
-RUN chmod +x /start
+# persist teamspeak3 data
+VOLUME ["/teamspeak3"]
 
-# /start runs it.
+# teamspeak3 server directory
+WORKDIR /opt/teamspeak3-server_linux_amd64
+
+# teamspeak3 ports
 EXPOSE 9987/udp
 EXPOSE 10011
 EXPOSE 30033
 
-VOLUME ["/data"]
-CMD ["/start"]
+# run teamspeak3
+CMD ["/opt/scripts/start.sh"]
+# CMD ["tail", "-f", "/dev/null"]

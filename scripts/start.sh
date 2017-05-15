@@ -1,10 +1,8 @@
 #!/bin/sh
+VOLUME=/teamspeak3
 
-# export shared libraries path
-export LD_LIBRARY_PATH=/opt/teamspeak
-
-# change into teamspeak directory
-cd /opt/teamspeak
+# keep previous database
+ln -s $VOLUME/ts3server.sqlitedb /opt/teamspeak3-server_linux_amd64/ts3server.sqlitedb
 
 # run teamspeak server
-./ts3server_linux_amd64 logpath=/data/logs/
+/opt/teamspeak3-server_linux_amd64/ts3server_minimal_runscript.sh
