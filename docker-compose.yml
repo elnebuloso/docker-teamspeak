@@ -4,5 +4,7 @@ services:
   teamspeak:
     build:
       context: .
-    volumes:
-      - ./opt/teamspeak3:/teamspeak3
+    ports:
+      - "9987:9987/udp"
+      - "10011:10011"
+      - "30033:30033"

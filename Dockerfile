@@ -43,4 +43,3 @@ EXPOSE 30033
 
 # run teamspeak3
 CMD ["/opt/scripts/start.sh"]
-# CMD ["tail", "-f", "/dev/null"]
