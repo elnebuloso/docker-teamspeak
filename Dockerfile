@@ -30,9 +30,6 @@ RUN apt-get update \
 ADD /scripts/ /opt/scripts/
 RUN chmod -R 774 /opt/scripts/
 
-# persist teamspeak3 data
-VOLUME ["/teamspeak3"]
-
 # teamspeak3 server directory
 WORKDIR /opt/teamspeak3-server_linux_amd64
 

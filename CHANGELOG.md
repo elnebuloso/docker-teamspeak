@@ -5,9 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
-## [1.0.0] - 2017-05-15
+## [1.1.0] - 2017-05-15
 ### Changed
 - Base Image from Ubuntu 16:04
+- Updated Run Scripts
+- ENV Config for Teamspeak3 Server Version
 
 
 ## [1.0.2]
