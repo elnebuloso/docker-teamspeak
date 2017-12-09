@@ -4,7 +4,7 @@ Teamspeak Server
 
 ## docker hub
 
-See Supported Tags at https://hub.docker.com/r/elnebuloso/ansible/tags/
+See Supported Tags at https://hub.docker.com/r/elnebuloso/teampspeak/tags/
 
 #### Supported tags and respective `Dockerfile` links
 
