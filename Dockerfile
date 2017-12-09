@@ -5,7 +5,7 @@ MAINTAINER jeff.tunessen@gmail.com
 # terminal
 ENV TERM linux
 ENV DEBIAN_FRONTEND noninteractive
-ENV TEAMSPEAK_VERSION 3.0.13.6
+ENV TEAMSPEAK_VERSION 3.0.13.8
 
 # download teamspeak3
 ADD http://dl.4players.de/ts/releases/${TEAMSPEAK_VERSION}/teamspeak3-server_linux_amd64-${TEAMSPEAK_VERSION}.tar.bz2 /tmp/teamspeak.tar.bz2

@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.3.0] - 2017-12-09
+### Changed
+- update to 3.0.13.8
+
+
 ## [1.2.0] - 2017-12-09
 ### Changed
 - update build process
