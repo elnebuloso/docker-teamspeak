@@ -1,6 +1,16 @@
 # docker-teamspeak
 
-[![Docker Build Statu](https://img.shields.io/docker/build/elnebuloso/teamspeak.svg)](https://hub.docker.com/r/elnebuloso/teamspeak/builds/)
+Teamspeak Server
+
+## docker hub
+
+See Supported Tags at https://hub.docker.com/r/elnebuloso/ansible/tags/
+
+#### Supported tags and respective `Dockerfile` links
+
+- [`3` `3.0` `3.0.13.6` (Dockerfile)](https://github.com/elnebuloso/docker-teamspeak/blob/master/Dockerfile)
+
+See full project details at https://github.com/elnebuloso/docker-teamspeak
 
 ## run the teamspeak container
 
@@ -10,10 +20,4 @@ docker run -d=true -p=9987:9987/udp -p=10011:10011 -p=30033:30033 elnebuloso/tea
 
 ## server admin token
 
-the server admin token can be found inside the container in /opt/teamspeak3-server_linux_amd64
-
-
-## links 
-
-- https://hub.docker.com/r/elnebuloso/teamspeak/
-- https://hub.docker.com/r/elnebuloso/teamspeak/tags/
+the server admin token can be found inside the container in /opt/teamspeak3-server_linux_amd64/logs
