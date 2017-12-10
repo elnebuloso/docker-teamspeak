@@ -26,9 +26,12 @@ case "$1" in
         docker tag teamspeak-latest elnebuloso/teamspeak:3.0.13.8
         docker tag teamspeak-latest elnebuloso/teamspeak:3.0
         docker tag teamspeak-latest elnebuloso/teamspeak:3
+        docker tag teamspeak-latest elnebuloso/teamspeak
+
         docker push elnebuloso/teamspeak:3.0.13.8
         docker push elnebuloso/teamspeak:3.0
         docker push elnebuloso/teamspeak:3
+        docker push elnebuloso/teamspeak
     ;;
 
     *)
