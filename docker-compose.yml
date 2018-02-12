@@ -8,3 +8,8 @@ services:
       - "9987:9987/udp"
       - "10011:10011"
       - "30033:30033"
+    volumes:
+      - teamspeak-logs:/opt/teamspeak3-server_linux_amd64/logs
+
+volumes:
+  teamspeak-logs:
