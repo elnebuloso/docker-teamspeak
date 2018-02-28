@@ -10,8 +10,6 @@ See Supported Tags at https://hub.docker.com/r/elnebuloso/teamspeak/tags/
 
 - [`latest` `3` `3.0` `3.1.0` (Dockerfile)](https://github.com/elnebuloso/docker-teamspeak/blob/master/Dockerfile)
 
-See full project details at https://github.com/elnebuloso/docker-teamspeak
-
 ## run the teamspeak container
 
 ```
