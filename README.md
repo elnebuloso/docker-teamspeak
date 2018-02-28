@@ -13,14 +13,15 @@ See Supported Tags at https://hub.docker.com/r/elnebuloso/teamspeak/tags/
 ## run the teamspeak container
 
 ```
-docker run --name teamspeak -d=true -p=9987:9987/udp -p=10011:10011 -p=30033:30033 elnebuloso/teamspeak
+docker-pull elnebuloso/teamspeak
+docker run -d --name teamspeak-server elnebuloso/teamspeak
+docker logs -f teamspeak-server
 ```
 
 ## server admin token
 
-the server admin token can be found inside the container in /opt/teamspeak3-server_linux_amd64/logs
+the server admin token can be found inside the container in /opt/teamspeak3-server_linux_amd64/logs after startup, or with docker logging
 
 ```
-docker logs elnebuloso/teamspeak
-docker exec -it teamspeak sh -c 'tail -f  /opt/teamspeak3-server_linux_amd64/logs/*.log*'
+docker logs -f teamspeak-server
 ```
