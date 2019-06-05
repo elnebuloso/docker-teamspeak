@@ -1,10 +1,10 @@
 # docker-teamspeak
 
-Teamspeak Server
+[![Build Status](https://travis-ci.com/elnebuloso/docker-teamspeak.svg?branch=master)](https://travis-ci.com/elnebuloso/docker-teamspeak)
+[![Docker Pulls](https://img.shields.io/docker/pulls/elnebuloso/teamspeak.svg)](https://hub.docker.com/r/elnebuloso/teamspeak)
+[![GitHub](https://img.shields.io/github/license/elnebuloso/docker-ansible.svg)](https://github.com/elnebuloso/docker-teamspeak)
 
-## docker hub
-
-See Supported Tags at https://hub.docker.com/r/elnebuloso/teamspeak/tags/
+Dockerized Teamspeak Server
 
 ## run the teamspeak container
 

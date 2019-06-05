@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 MAINTAINER jeff.tunessen@gmail.com
 
 ENV TERM linux
@@ -19,7 +19,7 @@ RUN apt-get update \
     && rm -rf /tmp/*
 
 ENV TS3SERVER_LICENSE accept
-ARG TEAMSPEAK_VERSION=3.1.0
+ARG TEAMSPEAK_VERSION
 
 ADD http://dl.4players.de/ts/releases/${TEAMSPEAK_VERSION}/teamspeak3-server_linux_amd64-${TEAMSPEAK_VERSION}.tar.bz2 /tmp/teamspeak.tar.bz2
 
