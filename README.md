@@ -1,6 +1,8 @@
+<img src="https://raw.githubusercontent.com/elnebuloso/docker-phing/master/logo.png" width="100%"/>
+
 # docker-teamspeak
 
-[![Build Status](https://travis-ci.com/elnebuloso/docker-teamspeak.svg?branch=master)](https://travis-ci.com/elnebuloso/docker-teamspeak)
+![Release](https://github.com/elnebuloso/docker-phing/workflows/Release/badge.svg)
 [![Docker Pulls](https://img.shields.io/docker/pulls/elnebuloso/teamspeak.svg)](https://hub.docker.com/r/elnebuloso/teamspeak)
 [![GitHub](https://img.shields.io/github/license/elnebuloso/docker-ansible.svg)](https://github.com/elnebuloso/docker-teamspeak)
 
