@@ -1,10 +1,6 @@
-<img src="https://raw.githubusercontent.com/elnebuloso/docker-teamspeak/master/logo.png" width="100%"/>
-
 # docker-teamspeak
 
-![Release](https://github.com/elnebuloso/docker-teamspeak/workflows/Release/badge.svg)
-[![Docker Pulls](https://img.shields.io/docker/pulls/elnebuloso/teamspeak.svg)](https://hub.docker.com/r/elnebuloso/teamspeak)
-[![GitHub](https://img.shields.io/github/license/elnebuloso/docker-teamspeak.svg)](https://github.com/elnebuloso/docker-teamspeak)
+![abandoned](https://img.shields.io/badge/project-abandoned-red)
 
 Dockerized Teamspeak Server
 
